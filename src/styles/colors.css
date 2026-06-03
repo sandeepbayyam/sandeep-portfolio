@@ -1,0 +1,21 @@
+:root {
+    --primary: #ff5c00;
+    --primary-hover: #ff7a33;
+
+    --background: #ffffff;
+    --foreground: #111827;
+
+    --card: #ffffff;
+    --border: #e5e7eb;
+
+    --header-height: 80px;
+}
+
+.dark {
+    --primary: #ff5c00;
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+
+    --card: #111111;
+    --border: #262626;
+}
