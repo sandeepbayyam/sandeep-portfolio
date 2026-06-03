@@ -12,7 +12,7 @@ export default function HomePage() {
                     id="home"
                     className="flex min-h-screen items-center justify-center"
                 >
-                    <h1 className="text-5xl font-bold">Home</h1>
+                    <h1 className="text-5xl font-bold">Home Test</h1>
                 </section>
 
                 <section
