@@ -1,18 +1,19 @@
 import React from "react";
 
 import Header from "@/components/layout/Header";
+import HeroSection from "@/components/sections/HeroSection";
 
 export default function HomePage() {
     return (
         <React.Fragment>
             <Header />
 
-            <main className="pt-32">
+            <main className="scroll-smooth">
                 <section
                     id="home"
                     className="flex min-h-screen items-center justify-center"
                 >
-                    <h1 className="text-5xl font-bold">Home Test</h1>
+                    <HeroSection />
                 </section>
 
                 <section
