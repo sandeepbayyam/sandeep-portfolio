@@ -12,7 +12,7 @@ export const PROFILE = {
         "Full Stack Developer",
         "Backend Engineer",
         "FastAPI Developer",
-        "Microservices Builder",
+        "Microservices Developer",
         "Cloud Enthusiast",
     ],
 

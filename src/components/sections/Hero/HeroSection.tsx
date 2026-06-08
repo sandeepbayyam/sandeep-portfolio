@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { BsLinkedin as Linkedin } from "react-icons/bs";
+import { Mail, ArrowUpRight } from "lucide-react";
 import CountUp from "react-countup";
 
 import { PROFILE } from "@/data/profile";
@@ -76,14 +78,34 @@ export default function HeroSection() {
                         {PROFILE.summary}
                     </p>
 
-                    <div className="mt-8 flex gap-4">
-                        <button className="rounded-full bg-primary px-6 py-3 font-semibold text-white">
-                            Download CV
-                        </button>
+                    <div className="mt-8 flex flex-wrap gap-4">
+                        <a
+                            href="https://linkedin.com/in/sandeepbayyam"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,92,0,0.45)]"
+                        >
+                            <Linkedin size={20} />
+                            <span>LinkedIn</span>
 
-                        <button className="rounded-full border border-white/10 px-6 py-3 font-semibold">
-                            Contact Me
-                        </button>
+                            <ArrowUpRight
+                                size={16}
+                                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                            />
+                        </a>
+
+                        <a
+                            href="mailto:sandeepbayyam@gmail.com"
+                            className="group flex items-center gap-2 rounded-full border border-foreground px-6 py-3 font-semibold transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-primary/10 hover:text-primary hover:shadow-[0_0_20px_rgba(255,92,0,0.15)]"
+                        >
+                            <Mail size={18} />
+                            <span>Email Me</span>
+
+                            <ArrowUpRight
+                                size={16}
+                                className="opacity-60 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
+                            />
+                        </a>
                     </div>
 
                     <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">

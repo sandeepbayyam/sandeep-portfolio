@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "@/components/layout/Header";
-import HeroSection from "@/components/sections/HeroSection";
+import HeroSection from "@/components/sections/Hero/HeroSection";
 
 export default function HomePage() {
     return (
