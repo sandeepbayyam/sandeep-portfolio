@@ -12,8 +12,8 @@ import EngineeringJourney from "./EngineeringJourney";
 
 export default function HeroSection() {
     return (
-        <section id="home" className="flex min-h-screen items-center">
-            <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+        <section id="home" className="flex min-h-screen items-center pt-32 lg:pt-24">
+            <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 ">
                 {/* Left */}
                 <div className="flex flex-col justify-center">
                     <motion.div
