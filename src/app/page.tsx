@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/Hero/HeroSection";
+import About from "@/components/sections/About/About";
 
 export default function HomePage() {
     return (
@@ -20,7 +21,7 @@ export default function HomePage() {
                     id="about"
                     className="flex min-h-screen items-center justify-center"
                 >
-                    <h1 className="text-5xl font-bold">About</h1>
+                    <About />
                 </section>
 
                 <section
