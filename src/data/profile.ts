@@ -1,8 +1,7 @@
 export const PROFILE = {
     name: "Sandeep Bayyam",
 
-    headline:
-        "Building Scalable Software, Cloud-Native Applications, and Modern Web Experiences.",
+    headline: "Building Scalable Software, Cloud-Native Applications, and Modern Web Experiences.",
 
     summary:
         "Full Stack Developer focused on building modern web applications, backend systems, microservices, and cloud-native solutions using React, Python, FastAPI, MongoDB,Kafka, Docker, Kubernetes, and Azure.",
@@ -37,5 +36,5 @@ export const PROFILE = {
             suffix: "+",
             label: "Features Delivered",
         },
-    ]
+    ],
 };

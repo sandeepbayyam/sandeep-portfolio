@@ -8,11 +8,7 @@ interface AboutCardProps {
     delay?: number;
 }
 
-export default function AboutCard({
-    title,
-    items,
-    delay = 0,
-}: AboutCardProps) {
+export default function AboutCard({ title, items, delay = 0 }: AboutCardProps) {
     return (
         <motion.div
             animate={{
@@ -24,30 +20,26 @@ export default function AboutCard({
                 repeat: Infinity,
                 ease: "easeInOut",
             }}
-            className="
-                group
-                relative
-                min-h-[280px]
-                overflow-hidden
-                rounded-3xl
-                border border-primary/10
-                bg-background/80
-                p-7
-                backdrop-blur-xl
-
-                shadow-[0_0_35px_rgba(255,92,0,.12)]
-            "
+            className="group border-primary/10 bg-background/80 relative min-h-[280px] overflow-hidden rounded-3xl border p-7 shadow-[0_0_35px_rgba(255,92,0,.12)] backdrop-blur-xl"
         >
             {/* Ambient Glow */}
-            <div
-                className="
-                    absolute inset-0
-                    bg-gradient-to-br
-                    from-primary/[0.18]
-                    via-transparent
-                    to-transparent
-                "
-            />
+            <div className="from-primary/[0.18] absolute inset-0 bg-gradient-to-br via-transparent to-transparent" />
+
+            {/* Shine Sweep */}
+            <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                <motion.div
+                    animate={{
+                        x: ["-150%", "250%"],
+                    }}
+                    transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay,
+                    }}
+                    className="via-foreground/10 absolute inset-y-0 w-24 rotate-12 bg-gradient-to-r from-transparent to-transparent blur-md"
+                />
+            </div>
 
             {/* Floating Light */}
             <motion.div
@@ -60,46 +52,18 @@ export default function AboutCard({
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
-                className="
-                    absolute
-                    -right-16
-                    -top-16
-                    h-40
-                    w-40
-                    rounded-full
-                    bg-primary/10
-                    blur-3xl
-                "
+                className="bg-primary/10 absolute -top-16 -right-16 h-40 w-40 rounded-full blur-3xl"
             />
 
             {/* Accent Bar */}
-            <div
-                className="
-                    absolute
-                    left-0
-                    top-0
-                    h-full
-                    w-[3px]
-                    bg-primary/40
-                "
-            />
+            <div className="bg-primary/40 absolute top-0 left-0 h-full w-[3px]" />
 
             <div className="relative z-10">
-                <h3 className="text-2xl font-bold tracking-tight">
-                    {title}
-                </h3>
+                <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
 
                 <div className="mt-6 space-y-5">
                     {items.map((item) => (
-                        <div
-                            key={item}
-                            className="
-                                flex items-center gap-3
-                                text-sm
-                                font-semibold
-                                text-muted-foreground
-                            "
-                        >
+                        <div key={item} className="text-muted-foreground flex items-center gap-3 text-sm font-semibold">
                             <motion.div
                                 animate={{
                                     scale: [1, 1.4, 1],
@@ -109,12 +73,7 @@ export default function AboutCard({
                                     repeat: Infinity,
                                     ease: "easeInOut",
                                 }}
-                                className="
-                                    h-2
-                                    w-2
-                                    rounded-full
-                                    bg-primary
-                                "
+                                className="bg-primary h-2 w-2 rounded-full"
                             />
 
                             <span>{item}</span>

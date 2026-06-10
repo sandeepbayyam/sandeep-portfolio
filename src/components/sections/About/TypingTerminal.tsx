@@ -51,78 +51,41 @@ export default function TypingTerminal() {
 
     return (
         <div className="font-mono text-sm md:text-base">
-            <pre className="whitespace-pre-wrap leading-8">
+            <pre className="leading-8 whitespace-pre-wrap">
                 {displayedText.split("\n").map((line, index) => {
                     const trimmed = line.trim();
 
-                    // Status
-                    if (
-                        trimmed.includes(
-                            "Available For Opportunities"
-                        )
-                    ) {
+                    if (trimmed.includes("Available For Opportunities")) {
                         return (
-                            <div
-                                key={index}
-                                className="font-medium text-emerald-500"
-                            >
+                            <div key={index} className="font-medium text-emerald-500">
                                 ● Available For Opportunities
                             </div>
                         );
                     }
 
-                    // Commands
                     if (trimmed.startsWith("$")) {
                         return (
-                            <div
-                                key={index}
-                                className="
-                                    text-blue-500
-                                    dark:text-white-500
-                                    font-medium
-                                "
-                            >
+                            <div key={index} className="font-medium text-blue-500 dark:text-blue-400">
                                 {line}
                             </div>
                         );
                     }
 
-                    // Empty Line
                     if (trimmed === "") {
-                        return (
-                            <div
-                                key={index}
-                                className="h-2"
-                            />
-                        );
+                        return <div key={index} className="h-2" />;
                     }
 
-                    // Responses
                     return (
-                        <div
-                            key={index}
-                            className="
-                                text-white-900
-                                dark:text-white
-                            "
-                        >
+                        <div key={index} className="text-foreground">
                             {line}
                         </div>
                     );
                 })}
 
                 <motion.span
-                    animate={{
-                        opacity: [0, 1, 0],
-                    }}
-                    transition={{
-                        duration: 1,
-                        repeat: Infinity,
-                    }}
-                    className="
-                        text-blue-500
-                        dark:text-white
-                    "
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="text-blue-500 dark:text-blue-400"
                 >
                     █
                 </motion.span>

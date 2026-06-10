@@ -39,7 +39,7 @@ export default function MobileMenu() {
                                 damping: 30,
                                 stiffness: 300,
                             }}
-                            className="fixed right-0 top-0 z-[100] h-screen w-[280px] border-l border-white/10 bg-zinc-950 p-6"
+                            className="fixed top-0 right-0 z-[100] h-screen w-[280px] border-l border-white/10 bg-zinc-950 p-6"
                         >
                             <div className="mb-10 flex justify-end">
                                 <button onClick={() => setOpen(false)}>
@@ -49,12 +49,7 @@ export default function MobileMenu() {
 
                             <div className="flex flex-col gap-6">
                                 {NAV_ITEMS.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        onClick={() => setOpen(false)}
-                                        className="text-lg font-semibold"
-                                    >
+                                    <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="text-lg font-semibold">
                                         {item.label}
                                     </Link>
                                 ))}

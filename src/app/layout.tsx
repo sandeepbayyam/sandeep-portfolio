@@ -6,7 +6,8 @@ import BackgroundEffects from "@/components/ui/BackgroundEffects";
 
 export const metadata: Metadata = {
     title: "Sandeep Bayyam | Software Engineer",
-    description: "Software Engineer with experience in building scalable web applications, REST APIs, cloud-native solutions, and modern user interfaces using Python, FastAPI, React, JavaScript, Docker, Kubernetes, and Azure.",
+    description:
+        "Software Engineer with experience in building scalable web applications, REST APIs, cloud-native solutions, and modern user interfaces using Python, FastAPI, React, JavaScript, Docker, Kubernetes, and Azure.",
     keywords: [
         "Sandeep Bayyam",
         "Software Engineer",
@@ -27,12 +28,13 @@ export const metadata: Metadata = {
     creator: "Sandeep Bayyam",
     openGraph: {
         title: "Sandeep Bayyam | Software Engineer",
-        description: "Explore my portfolio featuring full-stack development projects, cloud-native applications, API development, and modern web solutions.",
+        description:
+            "Explore my portfolio featuring full-stack development projects, cloud-native applications, API development, and modern web solutions.",
         type: "website",
-    }
+    },
 };
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en" suppressHydrationWarning>
             <body>

@@ -33,15 +33,12 @@ export default function Header() {
             className="fixed inset-x-0 top-0 z-50"
         >
             {/* Frosted glass strip */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-background/80 backdrop-blur-3xl [mask-image:linear-gradient(to_bottom,black_70%,transparent)]" />
+            <div className="bg-background/80 absolute inset-x-0 top-0 h-32 [mask-image:linear-gradient(to_bottom,black_70%,transparent)] backdrop-blur-3xl" />
             {/* Content */}
             <div className="relative px-4 pt-4 md:px-6">
-                <div className="mx-auto flex h-20 max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/10 px-4 shadow-[0_8px_40px_rgba(0,0,0,0.15)] backdrop-blur-3xl dark:bg-zinc-900/70 md:px-6">
+                <div className="mx-auto flex h-20 max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/10 px-4 shadow-[0_8px_40px_rgba(0,0,0,0.15)] backdrop-blur-3xl md:px-6 dark:bg-zinc-900/70">
                     {/* Logo */}
-                    <Link
-                        href="/"
-                        className="flex items-center"
-                    >
+                    <Link href="/" className="flex items-center">
                         <motion.div
                             whileHover={{
                                 scale: 1.04,
@@ -70,11 +67,7 @@ export default function Header() {
                             const isActive = activeSection === item.href.replace("#", "");
 
                             return (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    className="relative rounded-full px-6 py-3 text-md font-bold"
-                                >
+                                <Link key={item.href} href={item.href} className="text-md relative rounded-full px-6 py-3 font-bold">
                                     {isActive && (
                                         <motion.div
                                             layoutId="navbar-pill"
@@ -85,10 +78,9 @@ export default function Header() {
                                                     ease: [0.22, 1, 0.36, 1],
                                                 },
                                             }}
-                                            className="absolute inset-0 rounded-full bg-primary"
+                                            className="bg-primary absolute inset-0 rounded-full"
                                             style={{
-                                                boxShadow:
-                                                    "0 0 30px rgba(255,92,0,0.35)",
+                                                boxShadow: "0 0 30px rgba(255,92,0,0.35)",
                                             }}
                                         />
                                     )}
@@ -100,10 +92,9 @@ export default function Header() {
                                         transition={{
                                             duration: 0.2,
                                         }}
-                                        className={`relative z-10 block transition-colors duration-200 ${isActive
-                                            ? "text-white"
-                                            : "text-foreground"
-                                            }`}
+                                        className={`relative z-10 block transition-colors duration-200 ${
+                                            isActive ? "text-white" : "text-foreground"
+                                        }`}
                                     >
                                         {item.label}
                                     </motion.span>
@@ -126,7 +117,7 @@ export default function Header() {
                             transition={{
                                 duration: 0.2,
                             }}
-                            className="hidden items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(255,92,0,0.25)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(255,92,0,0.45)] sm:flex"
+                            className="bg-primary hidden items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(255,92,0,0.25)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(255,92,0,0.45)] sm:flex"
                         >
                             <Download size={18} />
                             Download CV
