@@ -55,7 +55,7 @@ export default function BackgroundEffects() {
                         repeatDelay: 4,
                         ease: "easeInOut",
                     }}
-                    className={`${item.size} absolute font-mono font-medium text-zinc-300/40`}
+                    className={`${item.size} text-foreground/30 absolute font-mono font-medium`}
                     style={{
                         left: item.left,
                         top: item.top,

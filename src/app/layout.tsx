@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import ThemeProvider from "@/providers/ThemeProvider";
-import BackgroundEffects from "@/components/ui/BackgroundEffects";
+import BackgroundEffects from "@/components/layout/BackgroundEffects";
+import ParticleBackground from "@/components/layout/ParticleBackground";
 
 export const metadata: Metadata = {
     title: "Sandeep Bayyam | Software Engineer",
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="en" suppressHydrationWarning>
             <body>
                 <ThemeProvider>
+                    <ParticleBackground />
                     <BackgroundEffects />
                     {children}
                 </ThemeProvider>

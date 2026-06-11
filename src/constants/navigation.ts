@@ -8,16 +8,16 @@ export const NAV_ITEMS = [
         href: "#about",
     },
     {
-        label: "Projects",
-        href: "#projects",
-    },
-    {
         label: "Skills",
         href: "#skills",
     },
     {
         label: "Experience",
         href: "#experience",
+    },
+    {
+        label: "Projects",
+        href: "#projects",
     },
     {
         label: "Contact",
