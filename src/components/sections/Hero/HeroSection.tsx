@@ -10,6 +10,10 @@ import { PROFILE } from "@/data/profile";
 import RoleSwitcher from "./RoleSwitcher";
 import EngineeringJourney from "./EngineeringJourney";
 
+import dynamic from "next/dynamic";
+
+const TechSphere = dynamic(() => import("./TechSphere"), { ssr: false });
+
 export default function HeroSection() {
     return (
         <section id="home" className="flex min-h-screen items-center pt-32 lg:pt-24">
@@ -119,7 +123,8 @@ export default function HeroSection() {
 
                 {/* Right */}
                 <div className="flex items-center justify-center">
-                    <EngineeringJourney />
+                    {/* <SkillsSphere /> */}
+                    <TechSphere />
                 </div>
             </div>
         </section>
